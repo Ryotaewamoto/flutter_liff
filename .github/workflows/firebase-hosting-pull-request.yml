@@ -28,6 +28,7 @@ jobs:
       - run: flutter build web
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
+          entrypoint: /firebase
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_FLUTTER_LIFF_PROJECT }}'
           projectId: flutter-liff-project
